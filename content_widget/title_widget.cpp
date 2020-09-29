@@ -22,12 +22,12 @@ title_widget::title_widget(QWidget* parent)
 
 	//version_title->setObjectName("whiteLabel");
 	//设置图片
-	medal_button->setPicName(QString(":/sysButton/medal"));
-	skin_button->setPicName(QString(":/sysButton/skin"));
-	feedback_button->setPicName(QString(":/sysButton/feedback"));
-	main_menu_button->setPicName(QString(":/sysButton/menu"));
-	min_button->setPicName(QString(":/sysButton/min"));
-	close_button->setPicName(QString(":/sysButton/close"));
+	medal_button->setPicName(QString("./Resources/img/sysButton/medal.png"));
+	skin_button->setPicName(QString("./Resources/img/sysButton/skin.png"));
+	feedback_button->setPicName(QString("./Resources/img/sysButton/feedback.png"));
+	main_menu_button->setPicName(QString("./Resources/img/sysButton/menu.png"));
+	min_button->setPicName(QString("./Resources/img/sysButton/min.png"));
+	close_button->setPicName(QString("./Resources/img/sysButton/close.png"));
 	//关联
 	connect(skin_button, SIGNAL(clicked()), this, SIGNAL(showSkin()));
 	connect(main_menu_button, SIGNAL(clicked()), this, SIGNAL(showMainMenu()));
@@ -53,8 +53,8 @@ title_widget::title_widget(QWidget* parent)
 	skin_button->setContentsMargins(0, 0, 10, 0);
 
 	QStringList string_list;
-	string_list << ":/toolWidget/tiJian" << ":/toolWidget/muMa" << ":/toolWidget/repair" << ":/toolWidget/qingLi"
-		<< ":/toolWidget/jiaSu" << ":/toolWidget/expert" << ":/toolWidget/menZhen" << ":/toolWidget/gongNeng";
+	string_list << "./Resources/img/toolWidget/tiJian.png" << "./Resources/img/toolWidget/muMa.png" << "./Resources/img/toolWidget/repair.png" << "./Resources/img/toolWidget/qingLi.png"
+		<< "./Resources/img/toolWidget/jiaSu.png" << "./Resources/img/toolWidget/expert.png" << "./Resources/img/toolWidget/menZhen.png" << "./Resources/img/toolWidget/gongNeng.png";
 
 
 	QHBoxLayout* button_layout = new QHBoxLayout();
@@ -84,7 +84,7 @@ title_widget::title_widget(QWidget* parent)
 
 	//标题栏里的那个360图标
 	QLabel* logo_label = new QLabel();
-	QPixmap pixmap(":/img/safe");
+	QPixmap pixmap("./Resources/img/safe.ico");
 	logo_label->setPixmap(pixmap);
 	logo_label->setFixedSize(pixmap.size());
 

@@ -10,7 +10,7 @@ class content_widget : public QMainWindow
 
 public:
     content_widget(QWidget *parent = Q_NULLPTR);
-    ~content_widget();
+    //~content_widget();
 
 
 private:
