@@ -89,6 +89,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="push_button.cpp" />
+    <ClCompile Include="title_widget.cpp" />
     <ClCompile Include="tool_button.cpp" />
     <QtRcc Include="content_widget.qrc" />
     <QtUic Include="content_widget.ui" />
@@ -101,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="tool_button.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="title_widget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
