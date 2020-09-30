@@ -12,19 +12,19 @@ content_widget::content_widget(QWidget* parent)
     : QWidget(parent)
 {
     //初始化
-    setAttribute(Qt::WA_TranslucentBackground); //表示窗口小部件应具有半透明背景
+    //setAttribute(Qt::WA_TranslucentBackground); //表示窗口小部件应具有半透明背景，会导致窗口为黑色
+    
     main_splitter = new QSplitter();
-
     main_splitter->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding); //Expanding表示缺省是合理的大小，但部件允许缩小并且可用
     main_splitter->setOrientation(Qt::Horizontal);           //水平线
     main_splitter->setHandleWidth(1);                        //设置分界线的宽度
 
-    initLeft();
-    initRight();
-    initRightTop();
-    initRightCenter();
-    initRightCenterFuntion();
-    initRightButton();
+    this->initLeft();
+    this->initRight();
+    this->initRightTop();
+    this->initRightCenter();
+    this->initRightCenterFuntion();
+    this->initRightButton();
 
     right_splitter->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);          //缺省大小是唯一可以接收的改变，因此部件不能放大也不能缩小
     right_splitter->setOrientation(Qt::Vertical);            //垂直线
@@ -41,7 +41,7 @@ content_widget::content_widget(QWidget* parent)
     main_splitter->addWidget(left_widget);
     main_splitter->addWidget(right_splitter);
 
-
+    //禁止拖动？
     for (int i = 0; i < right_splitter->count(); i++)               //？
     {
         //分界线是QSplitterHandle 类对象
@@ -50,9 +50,17 @@ content_widget::content_widget(QWidget* parent)
         handle->setEnabled(false);
     }
 
+    /*博客中是这样写的*/
     //主分割只有一条分界线
     QSplitterHandle* handle = main_splitter->handle(1);
     handle->setEnabled(false);
+
+    //源码中写法
+    //for (int i = 0; i < main_splitter->count(); i++)
+    //{
+    //    QSplitterHandle* handle = main_splitter->handle(i);
+    //    handle->setEnabled(false);
+    //}
 
     //水平
     QHBoxLayout* main_layout = new QHBoxLayout();
@@ -60,8 +68,8 @@ content_widget::content_widget(QWidget* parent)
     main_layout->setSpacing(0);
     main_layout->getContentsMargins(0, 0, 0, 0);
 
-    setLayout(main_layout);
-    translateLanguage();
+    this->setLayout(main_layout);
+    this->translateLanguage();
 
 }
 
@@ -79,11 +87,11 @@ void content_widget::initLeft()
 
     left_widget->resize(650, 500);
 
-    QPixmap label_pixmap(":/contentWidget/computer");
+    QPixmap label_pixmap("./Resources/img/contentWidget/computer.png");         //给标签贴图
     label->setPixmap(label_pixmap);
     label->setFixedSize(label_pixmap.size());
 
-    QFont suggest_font = suggest_label->font();
+    QFont suggest_font = suggest_label->font();                                 //设置字体
     suggest_font.setPointSize(12);
     suggest_font.setBold(true);
     suggest_label->setFont(suggest_font);
@@ -94,7 +102,7 @@ void content_widget::initLeft()
     system_safe_label->setFont(system_safe_font);
     system_safe_label->setObjectName("grayLabel");
 
-    QPixmap pixmap(":/contentWidget/power");
+    QPixmap pixmap("./Resources/img/contentWidget/power.png");
     power_button->setIcon(pixmap);
     power_button->setIconSize(pixmap.size());
     power_button->setFixedSize(180, 70);
@@ -158,23 +166,23 @@ void content_widget::initRightTop()
     login_font.setPointSize(12);
     login_button->setFont(login_font);
 
-    priv_label->setPixmap(QPixmap(":/contentWidget/priv"));
-    QPixmap safe_pixmap(":/contentWidget/360");
+    priv_label->setPixmap(QPixmap("./Resources/img/contentWidget/priv.png"));
+    QPixmap safe_pixmap("./Resources/img/contentWidget/360.png");
     safe_button->setIcon(safe_pixmap);
     safe_button->setFixedSize(safe_pixmap.size());
-    QPixmap tab_pixmap(":/contentWidget/tab");
+    QPixmap tab_pixmap("./Resources/img/contentWidget/tab.png");
     tab_button->setIcon(tab_pixmap);
     tab_button->setFixedSize(tab_pixmap.size());
-    QPixmap pet_pixmap(":/contentWidget/pet");
+    QPixmap pet_pixmap("./Resources/img/contentWidget/pet.png");
     pet_button->setIcon(pet_pixmap);
     pet_button->setFixedSize(tab_pixmap.size());
-    QPixmap lottery_pixmap(":/contentWidget/lottery");
+    QPixmap lottery_pixmap("./Resources/img/contentWidget/lottery.png");
     lottery_button->setIcon(lottery_pixmap);
     lottery_button->setFixedSize(lottery_pixmap.size());
-    QPixmap cloud_five_pixmap(":/contentWidget/cloud_five");
+    QPixmap cloud_five_pixmap("./Resources/img/contentWidget/cloud_five.png");
     cloud_five_button->setIcon(cloud_five_pixmap);
     cloud_five_button->setFixedSize(cloud_five_pixmap.size());
-    QPixmap caipiao_pixmap(":/contentWidget/caipiao");
+    QPixmap caipiao_pixmap("./Resources/img/contentWidget/caipiao.png");
     caipiao_button->setIcon(caipiao_pixmap);
     caipiao_button->setFixedSize(caipiao_pixmap.size());
 
@@ -234,6 +242,8 @@ void content_widget::initRightTop()
     main_layout->setContentsMargins(10, 10, 10, 10);
 
     //两信号
+    //connect(login_button, SIGNAL(clicked()), this, SIGNAL(showLoginDialog()));
+    //connect(register_button, SIGNAL(clicked()), this, SIGNAL(showRegisterDialog()));
 
     right_top_widget->setLayout(main_layout);
 }
@@ -257,17 +267,17 @@ void content_widget::initRightCenter()
     triggerman_button->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     net_shop_button->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-    QPixmap fireproof_pixmap(":/contentWidget/fireproof");
+    QPixmap fireproof_pixmap("./Resources/img/contentWidget/fireproof.png");
     fireproof_button->setIcon(fireproof_pixmap);
     fireproof_button->setIconSize(fireproof_pixmap.size());
     fireproof_button->setFixedSize(fireproof_pixmap.width() + 25, fireproof_pixmap.height() + 25);
 
-    QPixmap triggerman_pixmap(":/contentWidget/triggerman");
+    QPixmap triggerman_pixmap("./Resources/img/contentWidget/triggerman.png");
     triggerman_button->setIcon(triggerman_pixmap);
     triggerman_button->setIconSize(triggerman_pixmap.size());
     triggerman_button->setFixedSize(triggerman_pixmap.width() + 25, triggerman_pixmap.height() + 25);
 
-    QPixmap net_shop_pixmap(":/contentWidget/net_shop");
+    QPixmap net_shop_pixmap("./Resources/img/contentWidget/net_shop.png");
     net_shop_button->setIcon(net_shop_pixmap);
     net_shop_button->setIconSize(net_shop_pixmap.size());
     net_shop_button->setFixedSize(net_shop_pixmap.width() + 25, net_shop_pixmap.height() + 25);
@@ -312,9 +322,9 @@ void content_widget::initRightCenterFuntion()
     h_layout->setContentsMargins(10, 5, 0, 0);
 
     QStringList string_list;
-    string_list << ":/contentWidget/recovery" << ":/contentWidget/moblie" << ":/contentWidget/game_box" << ":/contentWidget/desktop"
-        << ":/contentWidget/net_repair" << ":/contentWidget/auto_run" << ":/contentWidget/net_speed" << ":/contentWidget/net_pretext"
-        << ":/contentWidget/first_add";
+    string_list << "./Resources/img/contentWidget/recovery.png" << "./Resources/img/contentWidget/mobile.png" << "./Resources/img/contentWidget/game_box.png" << "./Resources/img/contentWidget/desktop.png"
+        << "./Resources/img/contentWidget/net_repair.png" << "./Resources/img/contentWidget/auto_run.png" << "./Resources/img/contentWidget/net_speed.png" << "./Resources/img/contentWidget/net_pretext.png"
+        << "./Resources/img/contentWidget/first_add.png";
 
     //网格布局
     QGridLayout* grid_layout = new QGridLayout();
@@ -354,11 +364,11 @@ void content_widget::initRightButton()
     version_label = new QLabel();
     version_button = new QPushButton();
 
-    QPixmap label_pixmap(":/contentWidget/cloud");
+    QPixmap label_pixmap("./Resources/img/contentWidget/cloud.png");
     icon_label->setPixmap(label_pixmap);
     icon_label->setFixedSize(label_pixmap.size());
 
-    QPixmap pixmap(":/contentWidget/version");
+    QPixmap pixmap("./Resources/img/contentWidget/version.png");
     version_button->setIcon(pixmap);
     version_button->setIconSize(pixmap.size());
     version_button->setObjectName("transparentButton");

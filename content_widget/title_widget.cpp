@@ -1,26 +1,24 @@
 #include "title_widget.h"
 #include "push_button.h"
 #include"tool_button.h"
-#pragma execution_character_set("utf-8")	//指示char的执行字符集是UTF-8编码
+#pragma execution_character_set("utf-8")							//指示char的执行字符集是UTF-8编码
 
 title_widget::title_widget(QWidget* parent)
 	: QWidget(parent)
 {
 	//去掉边框和设置背景为透明
-	setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
+	//setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);			//会导致调试时，没办法关闭，可能在成品时，打开（源码没有）
 	/*setAttribute(Qt::WA_TranslucentBackground);*/
 
-
 	version_title = new QLabel();
-	medal_button = new push_button(); //勋章墙
-	skin_button = new push_button();  //换肤
-	main_menu_button = new push_button();//设置
-	min_button = new push_button();   //最小化   
-	feedback_button = new push_button();//反馈建议
-	close_button = new push_button(); //关闭
+	medal_button = new push_button();								//勋章墙
+	skin_button = new push_button();								//换肤
+	main_menu_button = new push_button();							//设置
+	min_button = new push_button();									//最小化   
+	feedback_button = new push_button();							//反馈建议
+	close_button = new push_button();								//关闭
 
-
-	//version_title->setObjectName("whiteLabel");
+	version_title->setObjectName("whiteLabel");						//源码有，博客中注释掉了；其含义是给这个实例命了个名字
 	//设置图片
 	medal_button->setPicName(QString("./Resources/img/sysButton/medal.png"));
 	skin_button->setPicName(QString("./Resources/img/sysButton/skin.png"));
@@ -36,26 +34,23 @@ title_widget::title_widget(QWidget* parent)
 
 	//水平布局
 	QHBoxLayout* title_layout = new QHBoxLayout();
-	title_layout->addWidget(version_title, 0, Qt::AlignVCenter);  //,stretch=0?, Qt::AlignVCenter：垂直方向居中
-	title_layout->addStretch();									  //添加了一个伸缩空间
-	title_layout->addWidget(medal_button, 0, Qt::AlignTop);		  //Qt::AlignTop：垂直方向靠上。
+	title_layout->addWidget(version_title, 0, Qt::AlignVCenter);	//,stretch=0?, Qt::AlignVCenter：垂直方向居中
+	title_layout->addStretch();										//添加了一个伸缩空间
+	title_layout->addWidget(medal_button, 0, Qt::AlignTop);			//Qt::AlignTop：垂直方向靠上。
 	title_layout->addWidget(skin_button, 0, Qt::AlignTop);	  
 	title_layout->addWidget(feedback_button, 0, Qt::AlignTop);
 	title_layout->addWidget(main_menu_button, 0, Qt::AlignTop);
 	title_layout->addWidget(min_button, 0, Qt::AlignTop);
 	title_layout->addWidget(close_button, 0, Qt::AlignTop);
 
-
-
-	title_layout->setSpacing(0);								//表示各个控件之间的上下间距为:0
-	title_layout->setContentsMargins(0, 0, 5, 0);				//设置左侧、顶部、右侧和底部边距，以便在布局周围使用
-	version_title->setContentsMargins(15, 0, 0, 0);				//
+	title_layout->setSpacing(0);									//表示各个控件之间的上下间距为:0
+	title_layout->setContentsMargins(0, 0, 5, 0);					//设置左侧、顶部、右侧和底部边距，以便在布局周围使用
+	version_title->setContentsMargins(15, 0, 0, 0);					//
 	skin_button->setContentsMargins(0, 0, 10, 0);
 
 	QStringList string_list;
 	string_list << "./Resources/img/toolWidget/tiJian.png" << "./Resources/img/toolWidget/muMa.png" << "./Resources/img/toolWidget/repair.png" << "./Resources/img/toolWidget/qingLi.png"
 		<< "./Resources/img/toolWidget/jiaSu.png" << "./Resources/img/toolWidget/expert.png" << "./Resources/img/toolWidget/menZhen.png" << "./Resources/img/toolWidget/gongNeng.png";
-
 
 	QHBoxLayout* button_layout = new QHBoxLayout();
 	QSignalMapper* signal_mapper = new QSignalMapper(this);
@@ -89,8 +84,8 @@ title_widget::title_widget(QWidget* parent)
 	logo_label->setFixedSize(pixmap.size());
 
 
-	/*safe_360_label->setObjectName("whiteLabel");
-	safe_label->setObjectName("whiteLabel");*/
+	safe_360_label->setObjectName("whiteLabel");			//同前面，源码里有，博客中被注释掉了
+	safe_label->setObjectName("whiteLabel");				//同上
 	QFont safe_360_font = safe_360_label->font();
 	safe_360_font.setPointSize(18);
 	safe_360_font.setBold(true);
@@ -100,7 +95,7 @@ title_widget::title_widget(QWidget* parent)
 	safe_label->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
 
 
-	QFont safe_font = safe_label->font();			//设置字体
+	QFont safe_font = safe_label->font();					//设置字体
 	safe_font.setPointSize(14);
 	safe_font.setBold(true);
 	safe_label->setFont(safe_font);
@@ -126,12 +121,10 @@ title_widget::title_widget(QWidget* parent)
 
 }
 
-
 title_widget::~title_widget()
 {
 
 }
-
 
 void title_widget::translateLanguage()
 {

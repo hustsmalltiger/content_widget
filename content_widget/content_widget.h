@@ -1,37 +1,20 @@
 #pragma once
-/*
-#include <QtWidgets/QMainWindow>
 
-#include "ui_content_widget.h"
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QSplitter>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QProgressBar>
+#include <QtGui/QPainter>
+#include <QtGui/QPen>
+#include <QtWidgets/QHBoxLayout>
+#include <QtCore/QEvent>
+#include <QtWidgets/QVBoxLayout>
 
-class content_widget : public QMainWindow
-{
-    Q_OBJECT
-
-public:
-    content_widget(QWidget *parent = Q_NULLPTR);
-    //~content_widget();
-
-
-private:
-    Ui::content_widgetClass ui;
-    
-};
-*/
-#include <QWidget>
-#include <QSplitter>
-#include <QToolButton>
-#include <QPushButton>
-#include <QLabel>
-#include <QProgressBar>
-#include <QPainter>
-#include <QPen>
-#include <QHBoxLayout>
-#include <QEvent>
-#include <QVBoxLayout>
 class content_widget : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
     explicit content_widget(QWidget* parent = 0);

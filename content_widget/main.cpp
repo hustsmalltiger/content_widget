@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 #include <QtCore/QTextCodec>
 #include <QtCore/QTranslator>
 #include "title_widget.h"
+#include "content_widget.h"
 
 int main(int argc, char* argv[])
 {
@@ -36,8 +37,11 @@ int main(int argc, char* argv[])
 	qss.close();
 
 
-	title_widget w;
-	w.show();
+	//title_widget wt;
+	//wt.show();
+
+	content_widget wc;
+	wc.show();
 
 	return a.exec();
 }
