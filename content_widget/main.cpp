@@ -1,14 +1,3 @@
-/*#include "content_widget.h"
-#include <QtWidgets/QApplication>
-
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    content_widget w;
-    w.show();
-    return a.exec();
-}*/
-
 #include <QtWidgets/QApplication>
 #include <QtCore/QTextCodec>
 #include <QtCore/QTranslator>
@@ -36,12 +25,11 @@ int main(int argc, char* argv[])
 	qApp->setStyleSheet(qss.readAll());
 	qss.close();
 
+	title_widget wt;
+	wt.show();
 
-	//title_widget wt;
-	//wt.show();
-
-	content_widget wc;
-	wc.show();
+	//content_widget wc;
+	//wc.show();
 
 	return a.exec();
 }

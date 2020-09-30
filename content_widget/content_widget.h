@@ -1,5 +1,5 @@
 #pragma once
-
+/******************************中央窗体的实现**************************/
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QToolButton>

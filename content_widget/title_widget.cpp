@@ -83,7 +83,6 @@ title_widget::title_widget(QWidget* parent)
 	logo_label->setPixmap(pixmap);
 	logo_label->setFixedSize(pixmap.size());
 
-
 	safe_360_label->setObjectName("whiteLabel");			//同前面，源码里有，博客中被注释掉了
 	safe_label->setObjectName("whiteLabel");				//同上
 	QFont safe_360_font = safe_360_label->font();
@@ -93,7 +92,6 @@ title_widget::title_widget(QWidget* parent)
 
 	safe_360_label->setAlignment(Qt::AlignHCenter | Qt::AlignBottom);
 	safe_label->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
-
 
 	QFont safe_font = safe_label->font();					//设置字体
 	safe_font.setPointSize(14);
@@ -147,7 +145,6 @@ void title_widget::translateLanguage()
 	safe_360_label->setText(tr("360"));
 	safe_label->setText(tr("safe"));
 }
-
 
 void title_widget::turnPage(QString current_page)
 {
