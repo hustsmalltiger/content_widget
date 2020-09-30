@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	QApplication a(argc, argv);
 
 	QTextCodec* codec = QTextCodec::codecForName("System");
-	QTextCodec::setCodecForLocale(codec);
+	QTextCodec::setCodecForLocale(codec);						//获取系统编码
 	//可以对界面中的菜单栏,label,对话框等进行翻译
 	QTranslator translator;
 	translator.load(QString("./Resources/qt_zh_CN.qm"));

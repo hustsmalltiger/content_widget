@@ -30,9 +30,6 @@
     <QtUic Include="content_widget.ui">
       <Filter>Resource Files</Filter>
     </QtUic>
-    <QtMoc Include="content_widget.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <ClCompile Include="content_widget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -59,6 +56,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="title_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="content_widget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
