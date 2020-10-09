@@ -83,6 +83,24 @@
     <ClCompile Include="login_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="register_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shadow_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kill_mummy_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="system_tray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="push_button.h">
@@ -128,6 +146,24 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="login_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="register_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="shadow_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="kill_mummy_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="system_tray.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="main_menu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="main_widget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

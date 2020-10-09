@@ -94,12 +94,18 @@
     <ClCompile Include="character_widget.cpp" />
     <ClCompile Include="clabel.cpp" />
     <ClCompile Include="drop_shadow_widget.cpp" />
+    <ClCompile Include="kill_mummy_widget.cpp" />
     <ClCompile Include="loading_widget.cpp" />
     <ClCompile Include="login_dialog.cpp" />
+    <ClCompile Include="main_menu.cpp" />
+    <ClCompile Include="main_widget.cpp" />
     <ClCompile Include="msg_box.cpp" />
     <ClCompile Include="push_button.cpp" />
+    <ClCompile Include="register_widget.cpp" />
     <ClCompile Include="setting_dialog.cpp" />
+    <ClCompile Include="shadow_widget.cpp" />
     <ClCompile Include="skin_widget.cpp" />
+    <ClCompile Include="system_tray.cpp" />
     <ClCompile Include="title_widget.cpp" />
     <ClCompile Include="tool_button.cpp" />
     <ClCompile Include="util.cpp" />
@@ -131,6 +137,12 @@
     <QtMoc Include="loading_widget.h" />
     <QtMoc Include="login_dialog.h" />
     <QtMoc Include="msg_box.h" />
+    <QtMoc Include="register_widget.h" />
+    <QtMoc Include="shadow_widget.h" />
+    <QtMoc Include="kill_mummy_widget.h" />
+    <QtMoc Include="system_tray.h" />
+    <QtMoc Include="main_menu.h" />
+    <QtMoc Include="main_widget.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

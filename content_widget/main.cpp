@@ -1,13 +1,9 @@
 #include <QtWidgets/QApplication>
 #include <QtCore/QTextCodec>
 #include <QtCore/QTranslator>
-#include "title_widget.h"
-#include "content_widget.h"
-#include "setting_dialog.h"
-#include "about_us.h"
-#include "character_widget.h"
-#include "skin_widget.h"
-#include "login_dialog.h"
+#include <QSharedMemory>
+#include "main_widget.h"
+
 
 int main(int argc, char* argv[])
 {
@@ -45,11 +41,35 @@ int main(int argc, char* argv[])
 	//skin_widget w_skin;
 	//w_skin.show();
 
-	login_dialog ld;
-	ld.show();
+	//login_dialog ld;
+	//ld.show();
 
 	//content_widget wc;
 	//wc.show();
 
-	return a.exec();
+	//register_widget wr;
+	//wr.show();
+
+
+
+	QSharedMemory shared_memory;
+	shared_memory.setKey(QString("main_window"));
+
+	if (shared_memory.attach())
+	{
+		return 0;
+	}
+
+	if (shared_memory.create(1))
+	{
+		main_widget m_main_widget;
+		m_main_widget.setTranslator(&translator_zh);
+		m_main_widget.showWidget();
+
+		return a.exec();
+	}
+
+
+
+	//return a.exec();
 }
