@@ -50,6 +50,12 @@
     <ClCompile Include="util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drop_shadow_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setting_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="push_button.h">
@@ -64,12 +70,15 @@
     <QtMoc Include="content_widget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="drop_shadow_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="setting_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="skin_widget.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="setting_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="util.h">

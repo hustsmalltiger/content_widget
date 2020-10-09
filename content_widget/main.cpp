@@ -3,6 +3,7 @@
 #include <QtCore/QTranslator>
 #include "title_widget.h"
 #include "content_widget.h"
+#include "setting_dialog.h"
 
 int main(int argc, char* argv[])
 {
@@ -25,8 +26,10 @@ int main(int argc, char* argv[])
 	qApp->setStyleSheet(qss.readAll());
 	qss.close();
 
-	title_widget wt;
-	wt.show();
+	//title_widget wt;
+	//wt.show();
+	setting_dialog sd;
+	sd.show();
 
 	//content_widget wc;
 	//wc.show();

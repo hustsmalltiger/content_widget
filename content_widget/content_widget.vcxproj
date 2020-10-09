@@ -88,7 +88,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="drop_shadow_widget.cpp" />
     <ClCompile Include="push_button.cpp" />
+    <ClCompile Include="setting_dialog.cpp" />
     <ClCompile Include="title_widget.cpp" />
     <ClCompile Include="tool_button.cpp" />
     <ClCompile Include="util.cpp" />
@@ -109,7 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
-    <ClInclude Include="setting_dialog.h" />
+    <QtMoc Include="drop_shadow_widget.h" />
+    <QtMoc Include="setting_dialog.h" />
     <ClInclude Include="skin_widget.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
