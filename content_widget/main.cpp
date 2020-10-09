@@ -7,7 +7,7 @@
 #include "about_us.h"
 #include "character_widget.h"
 #include "skin_widget.h"
-
+#include "login_dialog.h"
 
 int main(int argc, char* argv[])
 {
@@ -42,8 +42,11 @@ int main(int argc, char* argv[])
 	//character_widget w_character;
 	//w_character.show();
 
-	skin_widget w_skin;
-	w_skin.show();
+	//skin_widget w_skin;
+	//w_skin.show();
+
+	login_dialog ld;
+	ld.show();
 
 	//content_widget wc;
 	//wc.show();

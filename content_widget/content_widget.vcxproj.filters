@@ -71,6 +71,18 @@
     <ClCompile Include="skin_widget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="account_item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loading_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="msg_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="login_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="push_button.h">
@@ -104,6 +116,18 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="skin_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="account_item.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="loading_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="msg_box.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="login_dialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

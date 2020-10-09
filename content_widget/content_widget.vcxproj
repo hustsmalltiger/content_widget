@@ -89,10 +89,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="about_us.cpp" />
+    <ClCompile Include="account_item.cpp" />
     <ClCompile Include="change_skin_widget.cpp" />
     <ClCompile Include="character_widget.cpp" />
     <ClCompile Include="clabel.cpp" />
     <ClCompile Include="drop_shadow_widget.cpp" />
+    <ClCompile Include="loading_widget.cpp" />
+    <ClCompile Include="login_dialog.cpp" />
+    <ClCompile Include="msg_box.cpp" />
     <ClCompile Include="push_button.cpp" />
     <ClCompile Include="setting_dialog.cpp" />
     <ClCompile Include="skin_widget.cpp" />
@@ -119,10 +123,14 @@
     <QtMoc Include="character_widget.h" />
     <QtMoc Include="clabel.h" />
     <QtMoc Include="change_skin_widget.h" />
+    <QtMoc Include="account_item.h" />
     <ClInclude Include="common.h" />
     <QtMoc Include="drop_shadow_widget.h" />
     <QtMoc Include="setting_dialog.h" />
     <QtMoc Include="skin_widget.h" />
+    <QtMoc Include="loading_widget.h" />
+    <QtMoc Include="login_dialog.h" />
+    <QtMoc Include="msg_box.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
