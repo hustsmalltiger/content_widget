@@ -4,6 +4,10 @@
 #include "title_widget.h"
 #include "content_widget.h"
 #include "setting_dialog.h"
+#include "about_us.h"
+#include "character_widget.h"
+#include "skin_widget.h"
+
 
 int main(int argc, char* argv[])
 {
@@ -28,8 +32,18 @@ int main(int argc, char* argv[])
 
 	//title_widget wt;
 	//wt.show();
-	setting_dialog sd;
-	sd.show();
+
+	//setting_dialog sd;
+	//sd.show();
+
+	//about_us_dialog aud;
+	//aud.show();
+
+	//character_widget w_character;
+	//w_character.show();
+
+	skin_widget w_skin;
+	w_skin.show();
 
 	//content_widget wc;
 	//wc.show();

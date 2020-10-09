@@ -88,9 +88,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="about_us.cpp" />
+    <ClCompile Include="change_skin_widget.cpp" />
+    <ClCompile Include="character_widget.cpp" />
+    <ClCompile Include="clabel.cpp" />
     <ClCompile Include="drop_shadow_widget.cpp" />
     <ClCompile Include="push_button.cpp" />
     <ClCompile Include="setting_dialog.cpp" />
+    <ClCompile Include="skin_widget.cpp" />
     <ClCompile Include="title_widget.cpp" />
     <ClCompile Include="tool_button.cpp" />
     <ClCompile Include="util.cpp" />
@@ -110,10 +115,14 @@
     <QtMoc Include="title_widget.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="about_us.h" />
+    <QtMoc Include="character_widget.h" />
+    <QtMoc Include="clabel.h" />
+    <QtMoc Include="change_skin_widget.h" />
     <ClInclude Include="common.h" />
     <QtMoc Include="drop_shadow_widget.h" />
     <QtMoc Include="setting_dialog.h" />
-    <ClInclude Include="skin_widget.h" />
+    <QtMoc Include="skin_widget.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

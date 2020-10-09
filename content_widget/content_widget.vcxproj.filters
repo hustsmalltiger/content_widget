@@ -56,6 +56,21 @@
     <ClCompile Include="setting_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="about_us.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="character_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="change_skin_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skin_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="push_button.h">
@@ -76,11 +91,23 @@
     <QtMoc Include="setting_dialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="about_us.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="clabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="character_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="change_skin_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="skin_widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="skin_widget.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
